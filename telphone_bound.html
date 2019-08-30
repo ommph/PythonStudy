@@ -1,0 +1,55 @@
+<!DOCTPYE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="Description" content="绑定手机" />
+        <title>绑定手机</title>
+        <link rel="stylesheet" type="text/css" href="css/car.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/car.js"></script>                
+    </head>
+    <body>
+      <div class="warp_register">   
+        <div class="f-registercontent">   
+           <form action="" id="" name="">
+                    <div class="f-register">
+                        <p class="z-telnumber">
+                            <input type="tel" placeholder="请输入手机号码" value="" name="">
+                        </p>
+                        <p class="z-borderbottom"></p>
+                        <p class="z-code">
+                            <input type="tel" placeholder="请输入验证码" value="" name="" class="insertcode">
+                            <input type="button" value="获取验证码" name="" id="btn" class="recivecode">
+                        </p>
+                    </div>
+            </form>
+        </div>
+        <div class="f-confirm">
+            <input type="submit" value="绑定" name="" id="">
+        </div>     
+    </div>
+    <script type="text/javascript">  
+        var wait=60;  
+        function time(o) {  
+                if (wait == 0) {  
+                    o.removeAttribute("disabled");            
+                    o.value="获取验证码";  
+                    o.style.background = "#e46d4a";
+                    wait = 60;  
+                } else {  
+                    o.setAttribute("disabled", true);  
+                    o.value="" + wait + "s后重新获取"; 
+                    o.style.background = "#a2a2a2";
+                    wait--;  
+                    setTimeout(function() {  
+                        time(o)  
+                    },  
+                    1000)  
+                }  
+            }  
+        document.getElementById("btn").onclick=function(){time(this);}
+    </script>
+
+    </body>
+</html>

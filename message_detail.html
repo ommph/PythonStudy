@@ -1,0 +1,109 @@
+<!DOCTPYE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="Description" content="消息详情" />
+        <title>消息详情</title>
+        <link rel="stylesheet" type="text/css" href="css/car.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/car.js"></script>                
+    </head>
+    <body>
+      <!--主要内容开始-->  
+        <div class="wrap">
+
+            <div class="f-wrapcontent">
+                <!--第一条语音开始-->
+                <div class="cht_list">
+                    <div class="cht_listtime">1月8日13:10:03</div>
+
+                    <div class="cht_listcontent">
+
+                        <audio id="myaudio" src="http://192.168.106.95:1021/wechatMsgIface/resources/MYSHARE/10000000000/15810772010/15810772010_2_2_20160219101422_456789_710.mp3" controls="controls"  hidden="true"  >
+</audio>
+                        <div class="cht_listaudio" onclick="autoPlay()"><span></span></div>
+                        <div class="cht_listaudio_content">
+                            <p class="cht_ztime">3' 22''<p>
+                            <p class="cht_listfrom">来自: 9501387747751（京N985J1）</p>
+                        </div>
+                    </div>
+
+                    <div class="cht_listcontent">
+                        <audio id="myaudio01" src="http://192.168.106.95:1021/wechatMsgIface/resources/MYSHARE/10000000000/15810772010/15810772010_2_2_20160219101422_456789_710.mp3" controls="controls"  hidden="true"  >
+</audio>
+                        <div class="cht_listaudio" onclick="autoPlay1()"><span></span></div>
+                        <div class="cht_listaudio_content">
+                            <p class="cht_ztime">3' 22''<p>
+                            <p class="cht_listfrom">来自: 134****7751</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--第一条语音结束-->
+
+               
+
+                <!--回复的语音开始-->
+                 <div class="cht_currentlist">
+                    <div class="cht_listtime">1月8日13:10:03</div>                    
+                    <div class="cht_listcontent_current">
+                        <div class="cht_listaudio cht_listcurrentaudio"><span></span></div>
+                        <div class="cht_currenttime">3' 22''</div>
+                    </div>
+                </div>
+                <!--回复的语音结束-->
+        </div>
+
+        </div>
+
+        <!--主要内容结束-->  
+
+        <div class="clearfix"></div>
+
+        <!--底部按住说话开始-->
+
+        <div class="f_footer_voice">
+            <div class="f_touchstartspeak">按住说话</div>
+            <div class="f-touchstartjia">+</div>
+
+
+            <!--点击加号弹出的菜单开始-->
+                <div class="f_touchstartjia_content">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="images/hmd.png">&nbsp;黑名单
+                            </a>
+                        </li>
+                        <li>
+                            <p class="guanzhu_default"><img src="images/guanzhu.png"><span>&nbsp;关&nbsp;&nbsp;&nbsp;注</span></p>
+                        </li>
+                        <li>
+                            <p class="renling_default"><img src="images/renlingdefault.png">&nbsp;认&nbsp;&nbsp;&nbsp;领</p>
+                            <p class="renling" style="display:none;"><img src="images/renling.png">&nbsp;认&nbsp;&nbsp;&nbsp;领</p>
+                        </li>
+                    </ul>
+                </div>
+            <!--点击加号弹出的菜单结束-->
+        </div>
+
+        <!--底部按住说话结束-->
+
+        <!--点击关注弹出关注成功开始-->
+        <div class="f_guanzhu_sucess">
+            <p><img src="images/sucess.png">已关注成功!</p>
+        </div>
+        <!--点击关注弹出关注成功结束-->
+
+        <!--点击按住说话开始-->
+        <div class="f_speak">
+            <p class="f_speakimg"></p>
+            <p class="f_speakcontent">松开手指，取消发送</p>
+        </div>
+        <!--点击按住说话开始-->
+
+        
+    </body>
+</html>

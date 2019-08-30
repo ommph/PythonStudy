@@ -1,0 +1,91 @@
+<!DOCTPYE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="Description" content="车牌查询" />
+        <title>车牌查询</title>
+        <link rel="stylesheet" type="text/css" href="css/car.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/car.js"></script>                
+    </head>
+    <body>
+      <div class="f_pnumber">
+        <div class="f_pnumber_list">
+            <input type="text" id="btn" name="" value="京" readonly unselectable="on">
+        </div>
+        <div class="f_number_text">
+            <input type="text" placeholder="请输入车牌号码">
+        </div>
+      </div>
+
+      <!--错误提示文字开始-->
+      <div class="f_pnumber_error" style="display:none;">车牌号输入不正确！</div>
+      <!--错误提示文字结束-->
+
+      <!--点击弹窗的内容开始-->
+      <div class="f_pnumber_pop">
+        <div class="z_pnumber_list">
+            <ul>
+                <li>黑</li>
+                <li>吉</li>
+                <li>辽</li>
+                <li>京</li>
+                <li>冀</li>
+                <li>蒙</li>
+                <li>晋</li>
+                <li>津</li>
+            </ul>
+       </div>
+       <div class="z_pnumber_list">
+        <ul>
+            <li>皖</li>
+            <li>闽</li>
+            <li>苏</li>
+            <li>鲁</li>
+            <li>沪</li>
+            <li>浙</li>
+            <li>粤</li>
+            <li>桂</li>
+         </ul> 
+     </div>
+     <div class="z_pnumber_list">
+         <ul>  
+            <li>琼</li>
+            <li>豫</li>
+            <li>鄂</li>
+            <li>湘</li>
+            <li>赣</li>
+            <li>甘</li>
+            <li>宁</li>
+            <li>青</li>
+         </ul>
+       </div>
+       <div class="z_pnumber_list">   
+         <ul>  
+            <li>陕</li>
+            <li>新</li>
+            <li>贵</li>
+            <li>川</li>
+            <li>藏</li>
+            <li>云</li>
+            <li>渝</li>
+        </ul>
+        </div>
+      </div>
+      <!--点击弹窗的内容结束-->
+
+      <!--查询开始-->
+      <div class="f_pnumber_search">
+            <p>
+                <input type="submit" value="查询" id=""  name="" class="z_pnumber_btn">
+            </p>
+            <div class="f_numbertiptext">
+                <p class="z_pnumber_tip"></p>
+                <p class="z_numbertip_content">输入您要查询的车牌号，了解更多信息可以查询到车牌号对应的95013号码。您可以拨打此号码联系到车主。</p>
+            </div>
+      </div>
+      <!--查询结束-->
+
+    </body>
+</html>

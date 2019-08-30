@@ -1,0 +1,350 @@
+/* ============================================================
+   样式重置 
+   ============================================================ */
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+body{background: #38373b;-webkit-user-select:none; -moz-user-select: none; /* Firefox all */ -ms-user-select: none; /* IE 10+ */ /* No support for these yet, use at own risk */ -o-user-select: none; user-select: none; }
+ul,dl,ol{list-style:none;}
+img,fieldset,input[type="submit"]{border:0 none;}
+img{display:inline-block;overflow:hidden;vertical-align:top;}
+em{font-style:normal;}
+strong{font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+button,input[type="button"]{cursor:pointer;border:0 none;}
+textarea{word-wrap:break-word;resize:none;}  /* word-wrap for opera, resize for webkit */
+menu{margin:0;padding:0;}
+body{-webkit-user-select:none;-webkit-text-size-adjust:none!important;font-family:Helvetica;}
+div,input[type="number"]{-webkit-user-select:none;}
+div,a,button,input,img{-webkit-touch-callout:none;}/* 1.ios 长按时不触发系统的菜单 2.禁止长按时下载图片 */
+input,select,textarea{outline:none;}
+select{-webkit-appearance:none;appearance:none;}
+
+/* 去除android4.0以下 a/button/input标签被点击时产生的边框 因为边框引起了不少bug */
+a,button,input,select{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+/* Android4.0下不识别选择器-webkit-transform-3d 使用它可做Android4.0下版本兼容 */
+@media all and (-webkit-transform-3d){
+/* android4.0+ ios4+ 恢复按钮被点击时产生的效果 */
+/*a,button,input{-webkit-tap-highlight-color:rgba(130,130,130,.52);}*/
+a,button,input,select{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+} 
+html,body{height:100%;background:#ebebeb;font-size:14px;}
+a{text-decoration:none;} 
+
+/** 清浮动 **/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    _overflow: hidden;
+}
+
+* html > body .clearfix {
+    display: inline-block;
+    width: 100%;
+}
+
+* html .clearfix {
+    height: 1%; /* End hide from IE-mac */
+}
+
+a {
+    text-decoration: none;
+    color: #d075ea;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #9b9b9b; 
+font-size:16px;
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #9b9b9b; 
+font-size:16px;
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #9b9b9b; 
+font-size:16px;
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #9b9b9b; 
+font-size:16px;
+} 
+.wrap{margin-left:2%;margin-right:2%;}
+
+
+
+
+/*内容区域样式开始*/
+.cht_list{margin:5% 3% 2% 2%;}
+.cht_listtime{text-align:center;border-radius:5px;padding:4px 0;width:40%;background:#d4d4d4;color:#fff;margin:20px auto 0;border:1px solid #cfcfcf;}
+.cht_listcontent{background:#fff;border-radius:5px;border:1px solid #dbdada;margin-top:20px;height:60px;position:relative;}
+.cht_listcontent:before{content:' ';background:url(../images/triangle_03.png) no-repeat;width:10px;height:14px;background-size:10px 14px;position:absolute;top:15px;left:-10px;}
+.cht_listaudio{border-right:1px solid #e5e4e4;height:60px;float:left;}
+.cht_listaudio span{display:block;background:url(../images/audio_default.png) no-repeat;width:25px;height:25px;background-size:25px 25px;margin:10px;margin-top:15px;}
+.cht_listaudio_content{float:left;padding-top:10px;margin-left:10px;}
+.cht_listfrom{margin-top:10px;color:#9b9b9b;}
+
+
+.cht_currentlist{margin:5% 2% 2% 4%;}
+.cht_listcontent_current{background:#e46d4a;border-radius:5px;border:1px solid #dbdada;margin-top:20px;height:60px;position:relative;}
+.cht_listcontent_current:before{content:' ';background:url(../images/trianglecurrent.png) no-repeat;width:10px;height:17px;background-size:10px 17px;position:absolute;top:15px;right:-9px;}
+.cht_currenttime{color:#fff;padding-top:20px;float:right;margin-right:20px;}
+.cht_listcurrentaudio{float:right;border-left:1px solid #e5e4e4;}
+.cht_listcurrentaudio span{display:block;background:url(../images/audio_current.png) no-repeat;width:25px;height:25px;background-size:25px 25px;margin:10px;margin-top:15px;}
+
+.fchtlist_more{color:#6b6b6b;text-align:center;margin:18% 0;}
+
+
+/*底部样式*/
+.f_footer_voice{background:#fff;padding:10px;position:fixed;bottom:0;width:100%;}
+.f_touchstartspeak{float:left;border-radius:5px;border:1px solid #e46d4a;width:80%;margin:0 2%;text-align:center;color:#e46d4a;padding:10px 0;}
+.f-touchstartjia{float:left;color:#e46d4a;font-size:30px;position:relative;margin-left:10px;margin-top:3px;}
+
+/*20160330修改加号在iphone6下的错位*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){     
+    .f-touchstartjia{display:block;color:#e46d4a;font-size:30px;position:relative;bottom:5px}
+}
+
+.f-touchstartjia:after{content:'';border-radius:50%;width:30px;height:30px;border:1px solid #e46d4a;position:absolute;left:-8px;top:0;}
+
+/*20160330修改加号在iphone6下的错位*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){     
+    .f-touchstartjia:after{content:'';border-radius:50%;width:30px;height:30px;border:1px solid #e46d4a;position:absolute;left:-8px;top:5px;}
+}
+
+
+/*点击加号弹出的内容样式*/
+.f_touchstartjia_content{background:#fff;position:absolute;bottom:65px;right:30px;border:1px solid #dbdada;border-bottom:0;display:none;}
+.f_touchstartjia_content:before{content:'';background:url(../images/trianglebottom.png) no-repeat;width:10px;height:8px;background-size:10px 8px;position:absolute;bottom:-7px;right:10px;}
+.f_touchstartjia_content ul li{border-bottom:1px solid #dbdada;padding:5px 20px;}
+.f_touchstartjia_content ul li a{color:#e46d4a;}
+.f_touchstartjia_content ul li img{vertical-align:middle;width:28%;}
+.guanzhu_default,.renling_default{color:#e46d4a;}
+.renling{color:#9b9b9b;}
+
+
+.f_guanzhu_sucess{position:absolute;top:50%;left:10%;width:80%;background:rgba(0,0,0,.5);color:#fff;font-size:30px;border-radius:10px;padding:30px 0;text-align:center;display:none;}
+.f_guanzhu_sucess img{width:15%;vertical-align:middle;}
+
+
+/*按住说话样式*/
+/*.f_speak{position:absolute;bottom:30px;left:10%;background:rgba(0,0,0,.5);color:#fff;width:70%;border-radius:10px;padding:20px 0;text-align:center;display:none;}*/
+.f_speak{position: fixed;top: 50%;left: 50%;-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);background:rgba(0,0,0,.5);color:#fff;width:70%;border-radius:10px;padding:20px 0;text-align:center;display:none;}
+.f_speakimg{background:url(../images/speakimg.png) no-repeat center center;width:80px;height:115px;background-size:80px 115px;display:block;text-align:center;margin:0 auto;}
+.f_speakcontent{background:#d4753d;color:#fff;width:60%;text-align:center;margin:0 auto;border-radius:10px;padding:10px;margin-top:20px;}
+
+
+.f_send{position: fixed;top: 50%;left: 50%;-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);background:rgba(0,0,0,.5);color:#fff;width:70%;border-radius:10px;padding:20px 0;text-align:center;display:none;}
+/*聊天信息空白页样式*/
+.message_blank{background:url(../images/messageimg.png) no-repeat;width:150px;height:142px;background-size:150px 142px;margin:50px auto;display:block;}
+.message_blank_content{text-align:center;color:#5a5656;}
+.f-morecontent{display:none;}
+
+/*消息列表样式*/
+.f_messagelist{border-bottom:1px solid #bababa;width:100%;overflow:hidden;padding-bottom:10px;padding-top:20px;background:#fff;}
+.f_message_content{margin:0 5%;}
+.f_messagelist_content{margin-top:10px;color:#6e6e6e;}
+.f_messagelist_title{font-size:18px;color:#010101;}
+.z_message_left{float:left;color:#bababa;}
+.z_message_right{float:right;color:#6e6e6e;}
+.z_cph{font-size:16px;color:#2b2b2b;}
+.z_message{color:#6e6e6e;}
+
+
+/*长按某一条消息弹出的页面*/
+#TB_overlayBG,.renlingansert_overlay{position:fixed;left:0;bottom:0;display:none;width:100%;height:100%;background:rgba(0,0,0,.5);}
+.f_message_pop{background:#fff;width:70%;border-radius:10px;padding-top:40px;text-align:center;margin:0 auto;font-size:20px;font-weight:bold;position: fixed;top: 50%;left: 50%;-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);z-index:100;display:none;}
+.delete_btn{border-top:1px solid #c8c8c8;margin-top:30px;}
+.delete_btn span{color:#e46d4a;display:inline-block;width:48.4%;height:50px;line-height:50px;}
+.z_confirm{border-right:1px solid #c8c8c8;}
+.confirm_current{background:#dfdfdf;border-bottom-left-radius:10px;}
+.f_nuonuotitle{color:#e46d4a;}
+
+
+/*车牌查询样式*/
+.f_pnumber{margin-top:20px;border-top:1px solid #bababa;border-bottom:1px solid #bababa;background:#fff;overflow:hidden;height:30px;padding:10px 0;}
+.f_pnumber_list{float:left;border-right:1px dashed #ff5a00;padding-right:20px;padding-left:20px;}
+.f_pnumber_list input{border:none;font-size:30px;color:#e46d4a;background:#fff;width:30px;}
+.f_number_text{float:left;margin-left:20px;}
+.f_number_text input{border:none;font-size:16px;padding-top:10px;}
+.f_pnumber_pop{border:1px solid #bababa;background:#fff;position:relative;margin-top:20px;width:250px;left:2%;z-index:9;border-bottom:none;display:none;}
+.f_pnumber_pop ul{overflow:hidden;border-bottom:1px solid #bababa;padding:20px 0;padding-left:10px;}
+.f_pnumber_pop:before{content:'';background:url(../images/triangletop_03.png) no-repeat;width:20px;height:14px;background-size:20px 14px;position:absolute;top:-14px;left:20px;}
+.f_pnumber_pop ul li{float:left;color:#9b9b9b;font-size:20px;margin-right:4%;}
+.f_pnumber_error{color:#ff4e00;margin-top:20px;padding-left:20px;}
+
+/*查询样式*/
+
+.f_pnumber_search{width:90%;margin:0 auto;position:fixed;bottom:5%;text-align:center;}
+.z_pnumber_btn{background:#e46d4a;border-radius:20px;border:none;font-size:20px;color:#fff;width:90%;display:block;text-align:center;margin:0 auto;height:30px;-webkit-transform:translate(5%,20%);}
+.f_numbertiptext{margin-left:10%;margin-top:20px;display:table;}
+.z_pnumber_tip{background:url(../images/wxts.png) no-repeat;width:20px;height:20px;background-size:20px 20px;display:table-cell;}
+.z_numbertip_content{color:#5e5d5d;line-height:20px;text-align:left;margin-left:5px;}
+
+.z_numbertip_content a{color:#e46d4a;text-decoration:underline;}
+.f_nubmer_renling{margin-left:5%;margin-top:20px;font-size:12px;}
+.f_pnubmer_relingcontent{color:#010101;font-size:18px;line-height:30px;border-top:none;margin-top:0;}
+.f_pnumber_renlinglist{border-right:none;color:#010101;padding-left:2%;position:relative;}
+.z_gorenling{position:absolute;right:-123px;top:3px;}
+.z_gorenling img{width:50%;}
+.z_pnumber_num{font-size:16px;}
+.z-yilingling{position:absolute;right:-70px;top:0px;font-size:12px;color:#2491f7;}
+.z-yilingling img{width:20%;vertical-align:middle;}
+
+/*绑定手机号*/
+.warp_register {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.f-registertip{color: #6d6d6d;font-size: 14px;padding: 20px 0;}
+.f_drivernumber{text-align:center;margin:20px auto;font-size:22px;}
+.f-registercontent{border-top: 1px solid #acacac;border-bottom: 1px solid #acacac;background: #fff;padding: 20px 0 10px;color: #333;font-size: 16px;position: relative;}
+.z-borderbottom{border-top: 1px solid #acacac;}
+.z-telnumber input{border: none;height: 40px;font-family: "微软雅黑";padding-left:5%;font-size:20px;}
+.z-code{position: relative;margin-top: 10px;}
+.z-code .insertcode{border: none;height: 40px;font-family: "微软雅黑";width: 45%;padding-left:5%;font-size:20px;}
+.z-code .recivecode{border: none;background: #e46d4a;color: #fff;display: inline;width:34%;height:30px;border-radius:16px;font-size: 14px;font-family: "微软雅黑";display: inline;position: absolute;right:5%;top:5px;}
+.f-confirm {margin-left: 10%;margin-top:20px;}
+.f-confirm input{padding:5px 10px;background: #e46d4a;border-radius: 30px;text-align: center;display: block;width: 90%;border: none;color: #fff;font-size: 16px;font-family: "微软雅黑";}
+
+.f_driver_tip{margin-left:6%;margin-top:20px;font-size:12px;}
+
+/*认领结果样式*/
+.f_rlpop{width:250px;border-radius:5px;background:#fff;position:absolute;top:20%;left:13%;z-index:100;display:none;}
+.z_renling_answer{text-align:center;color:#000;border-bottom:1px solid #c8c8c8;padding:20px 0;font-weight:bold;}
+.z_renlinganswer_text{color:#727273;padding:8px 15px;}
+.z_renlinganswer_text b{color:#000;}
+.z_renlinganswer_text a{color:#e46d4a;text-decoration:underline;}
+.z_renlinganser_good{background:#e46d4a;color:#fff;font-size:16px;display:block;text-align:center;border-bottom-left-radius:5px;border-bottom-right-radius:5px;padding:10px 0;}
+.z_renlinganser_good a{color:#fff;font-size:16px;}
+.f_drivertelephone{margin:20px auto;font-size:16px;color:#000;margin-left:5%;}
+.f_drivercode{padding:0;}
+.f_boundtelsucess{padding:5px;}
+.f_boundtelsucess p{margin-left:5%;color:#000;margin-top:6px;margin-bottom:6px;}
+
+/*设置样式*/
+.f_reset{border-top: 1px solid #acacac;border-bottom: 1px solid #acacac;background: #fff;padding: 20px;overflow:hidden;}
+.f_reset_tel{color:#4e4e4e;float:left;}
+.f_reset_telbtn{float:right;right:5%;background:#e46d4a;border-radius:12px;width:35px;height:18px;position:relative;}
+.circle,.z_smscircle{background:#fff;border-radius:50%;display:inline-block;width:15px;height:15px;position:absolute;right:3px;top:1px;}
+.circle_right,.z_smscircleright{background:#fff;border-radius:50%;display:inline-block;width:15px;height:15px;position:absolute;left:3px;top:1px;}
+.z_sms{float:right;right:5%;background:#999;border-radius:12px;width:35px;height:18px;position:relative;}
+
+/*车友样式*/
+.f_carfriend_top{background:#e46d4a;height:50px;text-align:center;margin:0 auto;padding-top:10px;}
+
+#tabbox{overflow:hidden; margin:0 auto;}
+.tab_conbox{}
+.tab_con{ display:none;}
+
+.tabs{height: 32px;width:200px;text-align:center;margin:0 auto;line-height:32px;border-radius:10px;border:2px solid #fff;}
+.tabs li{height:32px;line-height:32px;float:left;overflow: hidden;width:100px;text-align:center;}
+.tabs li a {display: block;outline: none;color:#fff;font-size:16px;}  
+.tabs .thistab a{background:#fff;color:#e46d4a;border-top-right-radius:7px;border-bottom-right-radius:7px;font-weight:bold;}
+.tabs .thistableft a{background:#fff;color:#e46d4a;border-top-left-radius:7px;border-bottom-left-radius:7px;font-weight:bold;}
+
+
+.car_default{width:60%;margin-left:30%;}
+.car_default img{width:60%;margin:30px auto;}
+.car_default_text{color:#5a5656;width:80%;margin:0 auto;line-height:20px;}
+.car_default_text a{color:#e46d4a;}
+
+.carfriend_list{border-bottom:1px solid #acacac;background:#fff;padding:10px;overflow:hidden;position:relative;}
+.carfriend_listleft a{color:#010101;}
+.z_drivernumber{color:#6e6e6e;}
+.carfriend_listleft{display:table;}
+.carfriend_listleft_img{display:table-cell;width:15%;}
+.carfriend_listleft_img img{width:100%;}
+.z_carfriend_content{padding-left:10px;line-height:24px;display:table-cell;vertical-align:middle;}
+
+
+
+.carfriend_listright{color:#2491f7;font-size:12px;position:absolute;right:0px;top:40%; width:20%;}
+.carfriend_listright img{width:25%;vertical-align:middle;}
+
+/*车主详情页*/
+.carfriend_detail{margin-top:20px;border-top:1px solid #acacac;padding:30px;}
+.carfriend_detailimg {width:25%;}
+.frienddetail_time{color:#6e6e6e;margin-top:10px;}
+.carfriend_detialrenling{top:20%;}
+.frienddetail_more{color:#5e5d5d;margin-top:20px;text-align:center;}
+.frienddetail_look{position:relative;}
+.frienddetail_look img{width:20px;height:20px;position:absolute;right:35%;top:6px;}
+.frienddetail_look a{padding:5px 10px;background: #e46d4a;border-radius: 30px;text-align: center;display: block;width: 90%;border: none;color: #fff;font-size: 16px;font-family: "微软雅黑";}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*媒体查询*/
+@media (min-width:360px) and (max-width:370px){
+.delete_btn span{width:48.6%;}
+}
+
+@media (min-width:375px){
+.delete_btn span{width:48.7%;}
+}
+
+@media (min-width:400px) and (max-width:410px){
+.f-knodw2{padding-right:18px;}
+}
+
+@media (min-width:414px){
+.delete_btn span{width:48.8%;}
+}
+
+
+@media (min-width:424px) and (max-width:430px){
+.f-knodw2{padding-right:20px;}
+}
+
+@media (min-width:480px) and (max-width:500px){
+.f-knodw2{padding-right:23px;}
+}
+
+@media (min-width:540px) and (max-width:550px){
+.f-knodw2{padding-right:27px;}
+}
+
+@media (min-width:720px) and (max-width:750px){
+.f-knodw2{padding-right:39px;}
+}
+
+@media (min-width:800px) and (max-width:850px){
+.f-knodw2{padding-right:100px;}
+}
+
+@media (min-width:960px) and (max-width:1000px){
+.delete_btn span{width:49.5%;}
+}
+
+@media (min-width:1024px){
+.delete_btn span{width:49.5%;}
+}
+
+@media (min-width:1280px){
+.delete_btn span{width:49.6%;}
+}
+
+@media (min-width:1440px){
+.f-knodw2{padding-right:84px;}
+}
+
